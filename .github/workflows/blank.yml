@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Build step
-        run:  echo "A demo build"
+        run:  echo "Hello ${{ vars.MY_NAME}}"
   Test:
     runs-on: ubuntu-22.04
     needs: Build
