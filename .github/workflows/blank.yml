@@ -1,5 +1,5 @@
 name: Hello World1
-on: workflow_dispatch
+on: push
 jobs:
   Build:
     runs-on: ubuntu-22.04
