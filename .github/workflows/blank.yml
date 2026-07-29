@@ -6,10 +6,9 @@ jobs:
     steps:
       - name: Build step
         run:  echo "Hello ${{ vars.MY_NAME}}"
-jobs:
-  Build:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Build step
-        run:  echo "Hello ${{ secrets.DOCKER_PASSWORD }}"
-  
+# jobs:
+#   Build:
+#     runs-on: ubuntu-22.04
+#     steps:
+#       - name: Build step
+#         run:  echo "Hello ${{ secrets.DOCKER_PASSWORD }}
