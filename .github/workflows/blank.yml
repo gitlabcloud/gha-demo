@@ -4,21 +4,12 @@ jobs:
   Build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v7
-      - name: print index.html
-        run: cat index.html
-  # Test:
-  #   runs-on: ubuntu-22.04
-  #   needs: Build
-  #   steps:
-  #     - name: Test phase
-  #       run: echo "Running test cases"
-  # Deploy:
-  #   runs-on: ubuntu-22.04
-  #   needs: Test
-  #   steps:
-  #     - name: Deploy the App
-  #       run: echo "Deploying the app"
-        
+      - name: Build step
+        run:  echo "Hello ${{ vars.MY_NAME}}"
+jobs:
+  Build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build step
+        run:  echo "Hello ${{ secrets.DOCKER_PASSWORD }}"
   
