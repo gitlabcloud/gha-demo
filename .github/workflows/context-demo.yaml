@@ -12,3 +12,6 @@ jobs:
           echo "This is the name of node id ${{ github.node_id }}"
       - name: Print all variable under github
         run: echo "${{ toJson(github) }}"
+
+      - name: print all system variables
+        run: printenv
