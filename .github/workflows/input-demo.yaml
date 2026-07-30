@@ -5,13 +5,20 @@ on:
       environment:
         description: chose the enviornment for deploy
         required: true
-        default: dev
+        default: Dev
+        options:
+          - Prod
+          - Stage
+          - Dev
+      artifact-tag:
+        description: Choose the git tag to deploy
+        required: true
 jobs:
   input-demo:
     runs-on: ubuntu-22.04
     steps:
       - name: deploy the APP
-        run: echo "Deploying the application to ${{ inputs.environment }}"
+        run: echo "Deploying the ${{ input.artifact-tag }} to ${{ inputs.environment }}"
       
         
   
