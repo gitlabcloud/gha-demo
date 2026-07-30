@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: deploy the APP
-        run: echo "Deploying the ${{ input.artifact-tag }} to ${{ inputs.environment }}"
+        run: echo "Deploying the ${{ inputs.artifact-tag }} to ${{ inputs.environment }}"
       
         
   
