@@ -6,6 +6,7 @@ on:
         description: chose the enviornment for deploy
         required: true
         default: Dev
+        type: choice
         options:
           - Prod
           - Stage
